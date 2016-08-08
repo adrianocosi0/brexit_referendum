@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Gothons From Planer Percal #25</title>
+</head>
+<body>
+<form action="{% url 'presentation:graph' %}" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit">
+</form>
+<!-- {% block content %}
+{% endblock %} -->
+<div id="fig01"></div>
+<img src="{% url 'presentation:graph' %}">
+hoooooly
+</body>
+</html>
