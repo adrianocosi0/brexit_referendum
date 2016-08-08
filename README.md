@@ -13,3 +13,7 @@ The notebooks need to be ran in order
 ### Figures folder:
 
 Shows the plots originating from the code in the Data Analysis and Data Modelling notebooks
+
+### Brexit (developing):
+
+Interactive web interface that shows the results of the analysis, with the user being able of selecting the variables to be shown in the graphs
