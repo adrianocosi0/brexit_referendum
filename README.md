@@ -3,6 +3,10 @@ Run the code in the notebooks to run an analysis on the Brexit referendum in Lon
 
 The notebooks need to be ran in order
 
+# Prerequisites  
+
+Pandas, Numpy, Matplotlib, sql-alchemy, django, PostgreSql, psycopg2
+
 ### NoteBooks folder:
 
 1. Data Collection and Management: Extracts/Downloads data from different sources (Financial Times & London Datastore), after cleaning it returns a pandas DataFrame object, which is then saved as a csv file in the current directory
