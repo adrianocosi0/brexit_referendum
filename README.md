@@ -16,7 +16,7 @@ Pandas, Numpy, Matplotlib, sql-alchemy, django, PostgreSql, psycopg2
 
 ### Figures folder:
 
-Shows the plots originating from the code in the Data Analysis and Data Modelling notebooks
+Shows the plots originating from the code in the Data Analysis notebook
 
 ### Brexit (developing):
 
