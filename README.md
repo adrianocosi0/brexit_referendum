@@ -1,7 +1,5 @@
 # brexit_referendum
-Run the code in the notebooks to run an analysis on the Brexit referendum in London at the borough level  
-
-The notebooks need to be ran in order
+Execute the code in the notebooks (please do so following their order) to run an analysis on the Brexit referendum in London at the borough level, or just observe the results inside the notebooks and figure folders. A django web interface will also be added to let the user select the factors of interest interactively  
 
 # Prerequisites  
 
