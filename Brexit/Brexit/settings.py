@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Brexit.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'brexit',
+        'NAME': 'postgres',
         'PASSWORD': 'password',
         'USER': 'user_name',
         'HOST': 'localhost',
