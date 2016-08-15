@@ -11,7 +11,7 @@ import matplotlib
 
 # Load data from database into dataframe
 
-engine = create_engine("postgresql://adriano:pasta@localhost:5432/brexit")
+engine = create_engine("postgresql://user_name:password@localhost:5432/postgres")
 
 all_data = pd.read_sql('''SELECT * FROM records;''', engine, index_col='Borough')
 
