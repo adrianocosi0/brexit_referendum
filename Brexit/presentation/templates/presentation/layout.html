@@ -3,14 +3,35 @@
 	<title>Brexit Referendum</title>
 </head>
 <body>
-<form action="{% url 'presentation:graph' %}" method="post">
+<div>
+	<font size="30"><p>The Brexit Referendum in London</p></font>
+	<font size="20"><p>Select the factors to be visualized and the variable on which the bubbles' areas will depend</p></font>
+	<font size="20"><strong><p>Dependent variable: Percentage of leave votes on the Brexit referendum (borough-level)</p></strong></font>
+	<font size="20"><blockquote>
+		<p>
+			<ul>
+			<li>Parties - The percentage vote in the borough for the 4 major parties party at the Mayor elections of March 2016: Conservative, Labour, Green, UKIP</li>
+			<li>Ethnicity - The percentage of the following ethnicities in the borough: White, Black, Asian, Mixed</li>
+			<li>Stats - The following statistics:
+				<ul>
+					<li>Turnout: Percentage of people who voted at the mayor elections</li>
+					<li>2015 Pay: Average weekly earning in the borough in 2015</li>
+					<li>Fear of Crime: Percentage of people reporting to have concern for their security</li>
+					<li>Other Party: Percentage of people voting for one of the other minor parties at the mayor elections</li>
+			</ul>
+		</p>
+	</blockquote></font>
+</div>
+<font size="20"><form action="{% url 'presentation:graph' %}" method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
 	<input type="submit" value="Submit">
-</form>
+</form></font>
 <!-- {% block content %}
 {% endblock %} -->
 <div id="fig01"></div>
 <img src="{% url 'presentation:graph' %}">
+<br>
+hoooooly
 </body>
 </html>

@@ -12,5 +12,5 @@ choices_area = (
 )
 
 class Define_Variables_Form(forms.Form):
-	arguments = forms.TypedChoiceField(choices_arguments)
-	area_variable = forms.TypedChoiceField(choices_area)
+	arguments = forms.ChoiceField(choices_arguments)
+	area_variable = forms.ChoiceField(choices_area)

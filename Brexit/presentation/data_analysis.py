@@ -19,9 +19,7 @@ all_data = pd.read_sql('''SELECT * FROM records;''', engine, index_col='Borough'
 
 colors = np.random.rand(len(all_data.index))
 
-area = []
-
-def plot_bubbles(arguments, area_variable, space=0):
+def plot_bubbles(arguments, area_variable, name, space=0.1):
 
 	ah = iter(arguments)
 
@@ -49,10 +47,9 @@ def plot_bubbles(arguments, area_variable, space=0):
 
 	collection = [ax1, ax2, ax3, ax4]
 
-	for x in area_variable:
-		#want the bubbles to have an average area of 40, add a factor to increase the variability in size
-		factor = ((x-area_variable.mean())**2/400)
-		area.append(factor*x*(40/area_variable.mean()))
+	'''want the bubbles to have an average area of 20**2.8. standardize variable and multiply it 
+    by a factor 20**2.65 to increase the variability in size'''
+	area = [max(20**2.8 + ((x-area_variable.mean())/area_variable.std())*20**2.65, 5) for x in area_variable]
 	for ax in collection:
 		orient = all_data[ah.next()]
 		ax.set_ylabel('Leave %')
@@ -66,4 +63,7 @@ def plot_bubbles(arguments, area_variable, space=0):
 			arrowprops={'facecolor':'black', 'connectionstyle':'arc3,rad=0.3', 'arrowstyle':'simple'})
 		ax.scatter(orient, all_data['Leave votes'], s=area, c=colors, alpha=0.6)
 		ax.set_title(kh.next())
+		if name:
+			fig.suptitle("Bubble plot of Leave votes % by {}, bubble areas' variable is {}".format(name, area_variable.name), 
+                     y=0.935, fontsize=20)
 	return fig
