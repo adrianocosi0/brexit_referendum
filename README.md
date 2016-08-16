@@ -20,17 +20,20 @@ Shows the plots originating from the code in the Data Analysis notebook
 
 Interactive web interface that shows the results of the analysis, with the user being able of selecting the variables to be shown in the graphs  
 
-#### For the website to execute correctly data needs to be collected and saved via the Data Collection and Management notebook and tranferred in a sql databse via the Data transfer notebook. The settings script needs to be amended to link to the database with the correct user name and password specified. The project uses PostgreSQL, this also needs to be specified in the settings (django defaults to SQLite)
-
 **HOW TO**
 
-Download the project, cd into the directory "Brexit" and run the server with:  
+Make sure to have done the following:
 
-'python manage.py runserver --nothreading'  
+1. Data needs to be collected and saved via the Data Collection and Management notebook
+2. Tranferred to a sql databse via the Data transfer notebook 
+3. The settings script needs to be amended to link to the database with the correct user name and password specified
+4. The project uses PostgreSQL, this also needs to be specified in the settings (django defaults to SQLite)
 
-The nothreading option is necessary because Tkinter does not support threading, this will soon be fixed by running the plot function in the main loop
+Then download the project, cd into the directory "Brexit" and run the server with:  
 
-Changes or features to be added:  
+'python manage.py runserver'  
+
+**Changes or features to be added** 
 
 1. Avoid redirecting to another webpage after form submission (javascript required)
 2. Apply CSS to the webpage and to the django forms elements
