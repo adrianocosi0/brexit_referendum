@@ -4,6 +4,10 @@ from . import data_analysis
 from django.http import HttpResponse
 from . import forms
 import ast
+import matplotlib
+
+#changing the backend to agg allows for threading
+matplotlib.use('agg')
 
 def index(request):
 		#return webpage with empty form and first plot
