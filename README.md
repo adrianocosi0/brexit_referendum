@@ -31,7 +31,9 @@ Make sure to have done the following:
 
 Then download the project, cd into the directory "Brexit" and run the server with:  
 
-'python manage.py runserver'  
+'python manage.py runserver --nothreading' 
+
+The *nothreading* option is required as Tkinter is not thread-safe and the views script would need to make the matplotlib function run in the main thread. This has not been achieved yet
 
 **Changes or features to be added** 
 
