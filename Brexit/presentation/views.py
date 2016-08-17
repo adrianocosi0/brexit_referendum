@@ -6,9 +6,6 @@ from . import forms
 import ast
 import matplotlib
 
-#changing the backend to agg allows for threading
-matplotlib.use('agg')
-
 def index(request):
 		#return webpage with empty form and first plot
 		form = forms.Define_Variables_Form()
