@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from pandas import Series, DataFrame
 import matplotlib
+#use agg backend instead of Tkinter as it is thread-safe (but not interactive)
 matplotlib.use('agg')
 from pylab import figure, axes, plot, title, subplots
 import statsmodels.api as sm
