@@ -31,11 +31,9 @@ Make sure to have done the following:
 
 Then download the project, cd into the directory "Brexit" and run the server with:  
 
-'python manage.py runserver --nothreading' 
+'python manage.py runserver'
 
-The *nothreading* option is required as Tkinter is not thread-safe and the views script would need to make the matplotlib function run in the main thread. This has not been achieved yet
-
-**Changes or features to be added** 
+**Changes and features to be added** 
 
 1. Avoid redirecting to another webpage after form submission (javascript required)
 2. Apply CSS to the webpage and to the django forms elements
