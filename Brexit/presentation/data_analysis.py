@@ -3,15 +3,16 @@
 import pandas as pd
 import numpy as np
 from pandas import Series, DataFrame
+import matplotlib
+matplotlib.use('agg')
 from pylab import figure, axes, plot, title, subplots
 import statsmodels.api as sm
 from sqlalchemy import create_engine
 from matplotlib.backends.backend_agg import FigureCanvasAgg
-import matplotlib
 
 # Load data from database into dataframe
 
-engine = create_engine("postgresql://user_name:password@localhost:5432/postgres")
+engine = create_engine("postgresql://adriano:pasta@localhost:5432/brexit")
 
 all_data = pd.read_sql('''SELECT * FROM records;''', engine, index_col='Borough')
 
